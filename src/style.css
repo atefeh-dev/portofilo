@@ -10,8 +10,15 @@
   --fz-lg: 18px;
   --fz-xl: 20px;
   --fz-xxl: 35px;
+  --fz-heading: 32px;
+  --lightest-slate: #ccd6f6;
+  --lightest-navy: #233554;
+
   --green-tint: rgba(100, 255, 218, 0.1);
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.green {
+  color: var(--green);
 }
 body {
   background-color: var(--primary-color);
@@ -51,6 +58,7 @@ section {
   align-items: flex-start;
   min-height: 100vh;
   padding: 0px;
+  transition: all 0s ease-in;
 }
 .hello {
   color: var(--green);
@@ -85,6 +93,7 @@ section {
   }
   p {
     font-size: var(--fz-sm);
+    max-width: 500px;
   }
   .big-heading {
     font-size: var(--fz-xxl);
@@ -105,6 +114,10 @@ section {
   }
   p {
     font-size: var(--fz-md);
+    max-width: 498px;
+  }
+  .numbered-heading::after {
+    width: 200px;
   }
 }
 
@@ -122,4 +135,66 @@ section {
   section {
     padding: 80px 0px;
   }
+  .numbered-heading::after {
+    width: 100%;
+  }
+}
+.numbered-heading {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  margin: 10px 0px 40px;
+  width: 100%;
+  font-size: clamp(26px, 4vw, var(--fz-heading));
+  white-space: nowrap;
+  font-family: "Inter", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px 0px 10px;
+  font-weight: 600;
+  color: var(--lightest-slate);
+  line-height: 1.1;
+}
+.numbered-heading::before {
+  position: relative;
+  bottom: 4px;
+  counter-increment: section 1;
+  content: "0" counter(section) ".";
+  font-family: "Inter", sans-serif;
+  margin-right: 10px;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: clamp(var(--fz-md), 2vw, var(--fz-xl));
+  font-weight: 400;
+}
+.numbered-heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -5px;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--lightest-navy);
+}
+.huabVa .project-overline {
+  margin: 10px 0px;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+  font-weight: 400;
+}
+.dnNJYD a {
+  position: relative;
+  z-index: 1;
+}
+.huabVa:nth-of-type(2n + 1) .project-content {
+  grid-column: 7 / -1;
+  text-align: right;
 }
