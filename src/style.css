@@ -167,38 +167,6 @@ a {
   .numbered-heading::after {
     width: 100%;
   }
-  .huabVa .project-title a::before {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-  }
-  .huabVa .project-description {
-    padding: 20px 0px;
-    background-color: transparent;
-    box-shadow: none;
-  }
-  .huabVa:nth-of-type(2n + 1) .project-tech-list {
-    -webkit-box-pack: start;
-    justify-content: flex-start;
-  }
-  .huabVa .project-tech-list {
-    margin: 10px 0px;
-  }
-  .huabVa .project-title a::before {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-  }
 }
 .numbered-heading {
   color: var(--head-color);
@@ -232,6 +200,7 @@ h6 {
   color: var(--green);
   font-family: var(--font-mono);
   font-size: clamp(17px, 2vw, var(--fz-xl));
+  margin-left: 24px;
 
   font-weight: 600;
 }
@@ -279,7 +248,8 @@ li {
 .dnNJYD {
   list-style: none;
   padding: 0px;
-  margin: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .huabVa {
   position: relative;
@@ -306,7 +276,7 @@ li {
   position: relative;
   z-index: 2;
   margin-top: 15px;
-  padding: 10px 35px;
+  padding: 10px 40px;
   border-radius: var(--border-radius);
   background-color: var(--light-navy);
   color: var(--lightest-slate);
@@ -369,4 +339,32 @@ img {
   margin-left: 0px;
   margin-right: 12px;
   margin-top: 18px;
+}
+
+@media (max-width: 768px) {
+  .huabVa:nth-of-type(2n + 1) .project-content {
+    grid-column: 1 / -1;
+    padding: 10px 10px 200px;
+    text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  .huabVa:nth-of-type(2n + 1) .project-links {
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    margin-left: 4px;
+    margin-right: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .huabVa:nth-of-type(2n + 1) .project-tech-list {
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    font-size: var(--fz-sm);
+  }
+}
+@media (max-width: 768px) {
+  .greeniconcolor {
+    font-size: 14px;
+  }
 }
