@@ -263,6 +263,7 @@ li {
   color: var(--green);
   cursor: pointer;
 }
+
 .greeniconcolor:hover {
   color: var(--green);
 }
@@ -344,15 +345,27 @@ img {
 @media (max-width: 768px) {
   .huabVa:nth-of-type(2n + 1) .project-content {
     grid-column: 1 / -1;
-    padding: 10px 10px 200px;
+    padding: 30px 40px 30px;
     text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  .huabVa .project-content {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 100%;
+    grid-column: 1 / -1;
+    padding: 30px 40px 30px;
+    z-index: 5;
   }
 }
 @media (max-width: 768px) {
   .huabVa:nth-of-type(2n + 1) .project-links {
     -webkit-box-pack: start;
     justify-content: flex-start;
-    margin-left: 4px;
+    margin-left: 1px;
     margin-right: 0px;
   }
 }
@@ -364,7 +377,14 @@ img {
   }
 }
 @media (max-width: 768px) {
+  .huabVa .project-tech-list {
+    margin: 10px 0px;
+  }
+}
+@media (max-width: 768px) {
   .greeniconcolor {
-    font-size: 14px;
+    font-size: 17px;
+    margin-left: 0px;
+    padding: 2px;
   }
 }
