@@ -142,7 +142,7 @@ a {
     margin-right: 4vh;
   }
   p {
-    font-size: var(--fz-md);
+    font-size: var(--fz-lg);
     max-width: 498px;
   }
   .numbered-heading::after {
@@ -402,6 +402,23 @@ a:hover img {
     padding: 2px;
   }
 }
+@media (max-width: 1000px) {
+  .bNXWUU {
+    margin-left: 4vh;
+    margin-right: 4vh;
+  }
+}
+@media (max-width: 1000px) {
+  ul.skills-list li {
+    font-size: var(--fz-sm);
+  }
+}
+@media (max-width: 768px) {
+  .bNXWUU div {
+    width: 100%;
+  }
+}
+
 ul.skills-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(140px, 200px));
