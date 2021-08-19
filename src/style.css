@@ -53,7 +53,7 @@ p {
   margin-top: 22px;
   color: var(--public-font);
   font-weight: 300;
-  font-size: var(--fz-lg);
+  font-size: var(--fz-xl);
   line-height: 1.3;
 }
 section {
@@ -304,14 +304,24 @@ li {
   mix-blend-mode: screen;
 }
 img {
-  width: 700px;
   aspect-ratio: auto 700 / 437;
-  height: 437px;
+  transition: all 0.75s ease-in;
 }
 
+.project-image img {
+  filter: grayscale(50%) saturate(0.25) opacity(1) brightness(65%)
+    contrast(100%) hue-rotate(253deg);
+  -webkit-filter: grayscale(50%) saturate(0.25) opacity(1) brightness(65%)
+    contrast(100%) hue-rotate(253deg);
+}
+
+a:hover img {
+  filter: none !important;
+}
 .huabVa:nth-of-type(2n + 1) .project-image {
   grid-column: 1 / 8;
 }
+
 .huabVa:nth-of-type(2n + 1) .project-tech-list {
   -webkit-box-pack: end;
   justify-content: flex-end;
@@ -340,6 +350,9 @@ img {
   margin-left: 0px;
   margin-right: 12px;
   margin-top: 18px;
+}
+.bNXWUU {
+  max-width: 900px;
 }
 
 @media (max-width: 768px) {
@@ -379,6 +392,7 @@ img {
 @media (max-width: 768px) {
   .huabVa .project-tech-list {
     margin: 10px 0px;
+    font-size: var(--fz-sm);
   }
 }
 @media (max-width: 768px) {
@@ -387,4 +401,73 @@ img {
     margin-left: 0px;
     padding: 2px;
   }
+}
+ul.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  gap: 0px 10px;
+  padding: 0px;
+  margin: 20px 0px 0px;
+  overflow: hidden;
+  list-style: none;
+}
+ul.skills-list li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+}
+ul.skills-list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: var(--green);
+  font-size: var(--fz-sm);
+  line-height: 12px;
+}
+
+.iTdkQf {
+  position: relative;
+  max-width: 300px;
+  margin-left: 35px;
+}
+
+.iTdkQf img {
+  width: 400px;
+  filter: grayscale(50%) saturate(0.25) opacity(1) brightness(65%)
+    contrast(100%) hue-rotate(253deg);
+  -webkit-filter: grayscale(50%) saturate(0.25) opacity(1) brightness(65%)
+    contrast(100%) hue-rotate(253deg);
+  margin-top: 30px;
+  height: 450px;
+  transition: all 0.15s ease-in;
+}
+.iTdkQf img:hover {
+  filter: none !important;
+}
+.iTdkQf .wrapper::after {
+  border: 2px solid var(--green);
+  top: 15px;
+  left: 20px;
+  z-index: -1;
+}
+.iTdkQf .wrapper:hover:after {
+  border: 2px solid var(--green);
+  top: 18px;
+  left: 22px;
+  z-index: -1;
+  height: 99%;
+  width: 98%;
+}
+
+.iTdkQf .wrapper::before,
+.iTdkQf .wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
 }
