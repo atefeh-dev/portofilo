@@ -572,7 +572,7 @@ h6 {
   font-size: 20px;
   transition: all 0.5s ease-out;
 }
-.hOvuuP li:hover {
+.hOvuuP a:hover {
   color: var(--green);
   font-size: 22px;
   margin-bottom: 2px;
@@ -706,4 +706,45 @@ h6 {
 }
 .buZqzj .resume-button:hover {
   background-color: var(--green-tint);
+}
+
+.earxGk i {
+  padding: 20px;
+}
+.earxGk p {
+  margin: 0;
+  font-size: var(--fz-md);
+  text-align: center;
+}
+.earxGk p:hover {
+  color: var(--green);
+}
+.iKeBGp {
+  display: none;
+  width: 100%;
+  max-width: 270px;
+
+  margin: 0px auto 10px;
+  color: var(--light-slate);
+  text-align: center;
+}
+.iKeBGp ul {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  font-size: 21px;
+}
+
+.iKeBGp a:hover {
+  color: var(--green);
+}
+@media (max-width: 1185px) {
+  .iKeBGp {
+    display: block;
+  }
 }
