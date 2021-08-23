@@ -109,6 +109,7 @@ a {
 }
 .fade-up--get-in-touch:hover {
   background-color: var(--green-tint);
+  color: var(--green);
 }
 .big-heading {
   margin: 0px;
@@ -621,6 +622,7 @@ h6 {
 }
 .jJFfEJ a {
   margin: 20px auto;
+  color: var(--green);
   padding: 10px;
   font-family: var(--font-mono);
   font-size: var(--fz-xxs);
